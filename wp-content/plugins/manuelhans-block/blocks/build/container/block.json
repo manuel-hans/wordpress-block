@@ -1,0 +1,13 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "manuelhans/container",
+  "version": "0.1.0",
+  "title": "Manuel Hans Container",
+  "category": "text",
+  "icon": "admin-network",
+  "description": "Container component for feature cards",
+  "example": {},
+  "textdomain": "layout",
+  "editorScript": "file:./index.js"
+}

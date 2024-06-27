@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.3.2"
+  },
+  "scripts": {
+	  "start": "sass --watch ./scss/style.scss ./assets/css/style.css",
+	  "build": "sass --style=compressed ./scss/style.scss ./assets/css/style.min.css"
+  }
+}

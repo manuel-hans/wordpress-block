@@ -1,0 +1,13 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "manuelhans/feature-card",
+	"version": "0.1.0",
+	"title": "Manuel Hans Feature Card",
+	"category": "text",
+	"icon": "admin-network",
+	"description": "Feature card component",
+	"example": {},
+	"textdomain": "layout",
+	"editorScript": "file:./index.js"
+}

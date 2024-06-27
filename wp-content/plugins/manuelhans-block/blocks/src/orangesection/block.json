@@ -1,0 +1,13 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "manuelhans/orangesection",
+	"version": "0.1.0",
+	"title": "Manuel Hans Orange Section",
+	"category": "text",
+	"icon": "admin-network",
+	"description": "Orange section component",
+	"example": {},
+	"textdomain": "layout",
+	"editorScript": "file:./index.js"
+}

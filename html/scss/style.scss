@@ -1,0 +1,168 @@
+/*!
+Theme Name: manuelhans
+Theme URI: http://manuelhans.com/
+Author: Manuel Hans
+Author URI: http://manuelhans.com/
+Description: Theme for technical test.
+Version: 1.0.0
+*/
+
+@use "sass:map";
+
+// Custom.scss
+// Option B: Include parts of Bootstrap
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "../node_modules/bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+$primary: #F18825;
+$secondary: #2B3DEC;
+$danger: #F46565;
+$dark: #373F41;
+
+$btn-color: #FFF;
+$btn-padding-y: 1rem;
+$btn-padding-x: 1.8rem;
+$btn-font-weight: 700;
+$btn-border-radius: 0;
+$btn-border-radius-sm: 0;
+$btn-border-radius-lg: 0;
+
+$navbar-padding-y: 1.5rem;
+$dark-text-emphasis: #C3CBCD;
+
+$input-bg: #F4F5F4;
+$input-border-radius: 0;
+$input-border-color: #272929;
+$input-padding-y: 0.7rem;
+
+$font-size-base: 1rem;
+
+$h1-font-size:                $font-size-base * 3.125;
+$h2-font-size:                $font-size-base * 2.5;
+$h3-font-size:                $font-size-base * 2;
+$h4-font-size:                $font-size-base * 1.125;
+$h5-font-size:                $font-size-base * 1;
+$h6-font-size:                $font-size-base * 0.875;
+
+$font-sizes: (
+    1: $h1-font-size,
+    2: $h2-font-size,
+    3: $h3-font-size,
+    4: $h4-font-size,
+    5: $h5-font-size,
+    6: $h6-font-size,
+    7: $font-size-base * 0.75,
+);
+
+$spacer: 1rem;
+$spacers: (
+    0: 0,
+    1: $spacer * .25,
+    2: $spacer * .5,
+    3: $spacer,
+    4: $spacer * 1.5,
+    5: $spacer * 2,
+    6: $spacer * 3,
+    7: $spacer * 4,
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 640px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+// 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+
+// 4. Include any default map overrides here
+
+// 5. Include remainder of required parts
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+// 6. Optionally include any other parts as needed
+@import "../node_modules/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/helpers";
+@import "../node_modules/bootstrap/scss/buttons";
+@import "../node_modules/bootstrap/scss/navbar";
+@import "../node_modules/bootstrap/scss/transitions";
+@import "../node_modules/bootstrap/scss/forms";
+
+$utilities: map-merge(
+  $utilities,
+  (
+    "height": map-merge(
+        map-get($utilities, "height"),
+        (
+            values: map-merge(
+                map-get(map-get($utilities, "height"), "values"),
+                (
+                    "icon": 2.5rem,
+                    "logo": 2rem,
+                ),
+            ),
+        ),
+    ),
+    "font-weight": map-merge(
+        map-get($utilities, "font-weight"),
+        (
+            values: map-merge(
+                map-get(map-get($utilities, "font-weight"), "values"),
+                (
+                    900: 900
+                ),
+            ),
+        ),
+    ),
+  )
+);
+
+// 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
+@import "../node_modules/bootstrap/scss/utilities/api";
+
+// 8. Add additional custom code here
+
+body{
+    font-family: 'Mulish', sans-serif;
+}
+
+.btn-primary{
+    color: #fff;
+}
+
+.navbar-nav{
+    .nav-link.active{
+        color: $secondary;
+    }
+    .nav-link{
+        color: $dark;
+        text-decoration: none;
+        font-size: $h6-font-size;
+
+        a{
+            padding: 0;
+        }
+    }
+}
+.navbar{
+    background-color: rgba($secondary, 0.06);
+}
+.bg-gradient-success-danger{
+    background: linear-gradient(180deg, $primary 0%, $danger 100%);
+}
+
+.banner-img{
+    max-width: map.get($grid-breakpoints, "sm");
+}

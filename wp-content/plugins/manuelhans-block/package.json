@@ -1,0 +1,19 @@
+{
+  "name": "manuelhans-block",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "wp-scripts start --webpack-src-dir=blocks/src/ --output-path=blocks/build/",
+    "build": "wp-scripts build --webpack-src-dir=blocks/src/ --output-path=blocks/build/",
+    "start:container": "wp-scripts start --webpack-src-dir=blocks/src/container --output-path=blocks/build/container",
+    "build:container": "wp-scripts build --webpack-src-dir=blocks/src/container --output-path=blocks/build/container",
+    "start:row": "wp-scripts start --webpack-src-dir=blocks/src/row --output-path=blocks/build/row",
+    "build:row": "wp-scripts build --webpack-src-dir=blocks/src/row --output-path=blocks/build/row"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@wordpress/scripts": "^26.13.0"
+  }
+}
